@@ -28,17 +28,29 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
+    let userToStore = null;
+
     if (email === 'sall@gmail.com' && password === 'sall123') {
-      const userToStore = {
+      userToStore = {
         email,
-        name: 'Sall', 
-        role: 'admin'
+        name: 'Sall',
+        role: 'admin',
       };
+    } else if (email === 'conde@gmail.com' && password === 'conde123') {
+      userToStore = {
+        email,
+        name: 'Organisateur',
+        role: 'organisateur',
+      };
+    }
+
+    if (userToStore) {
       localStorage.setItem('user', JSON.stringify(userToStore));
       setUser(userToStore);
       setIsAuthenticated(true);
       return true;
     }
+    
     return false;
   };
 
