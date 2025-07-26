@@ -14,8 +14,10 @@ const EventSidebar = ({ isOpen, toggleSidebar }) => {
     { icon: LayoutDashboard, label: 'Tableau de bord', path: `/events/${eventId}` },
     { icon: CalendarDays, label: 'Programme', path: `/events/${eventId}/program` },
     { icon: Ticket, label: 'Tickets', path: `/events/${eventId}/tickets` },
+    { icon: Ticket, label: 'Speakers', path: `/speakers/${eventId}/speakers` },
     { icon: Users, label: 'Participants', path: `/events/${eventId}/participants` },
-    { icon: Handshake, label: 'Rendez-vous', path: `/events/${eventId}/meetings` },
+    { icon: Ticket, label: 'Invites', path: `/invites/${eventId}/invites` },
+    { icon: Handshake, label: 'Business Meets', path: `/events/${eventId}/meetings` },
     { icon: ScanLine, label: 'Tickets scannés', path: `/events/${eventId}/scanned-tickets` },
     { icon: BarChart, label: 'Rapport', path: `/events/${eventId}/report` },
   ];

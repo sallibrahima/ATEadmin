@@ -95,6 +95,19 @@ const Events = () => {
     }
   ];
 
+  //Ajouter pour recuperer le slug (titre de l'évenement pour facilité lien formulaire d'inscription)
+
+  const slugify = (str) => 
+  str
+    .toLowerCase()
+    .normalize("NFD")                 // Remove accents
+    .replace(/[\u0300-\u036f]/g, "") // Remove diacritics
+    .replace(/[^a-z0-9]+/g, '-')     // Replace non-alphanum with hyphens
+    .replace(/^-+|-+$/g, '');        // Remove leading/trailing hyphens
+
+
+  //Fin code ajouter
+
   const getEventStatus = (event) => {
     if (event.statusUpdate) return event.statusUpdate;
     const today = new Date();

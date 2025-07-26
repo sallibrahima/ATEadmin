@@ -1,2 +1,0 @@
-# ATEadmin
-AFRINOV TECH EXPO

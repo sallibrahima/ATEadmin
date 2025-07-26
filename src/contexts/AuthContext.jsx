@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
       setIsAuthenticated(true);
       return true;
     }
-    
+
     return false;
   };
 
@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated,
     user,
     login,
-    logout
+    logout,
   };
 
   return (

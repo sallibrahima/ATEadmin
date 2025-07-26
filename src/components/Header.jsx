@@ -30,7 +30,9 @@ const Header = ({ toggleSidebar }) => {
         if (!eventSubPage || parts.length === 3) return 'Tableau de bord Événement';
         if (eventSubPage === 'program') return 'Programme';
         if (eventSubPage === 'tickets') return 'Tickets';
+        if (eventSubPage === 'speakers') return 'Speakers';
         if (eventSubPage === 'participants') return 'Participants';
+        if (eventSubPage === 'invite') return 'Invités';
         if (eventSubPage === 'meetings') return 'Rendez-vous';
         if (eventSubPage === 'scanned-tickets') return 'Tickets Scannés';
         if (eventSubPage === 'report') return 'Rapport d\'événement';
@@ -40,6 +42,10 @@ const Header = ({ toggleSidebar }) => {
     if (path === '/users') return 'Utilisateurs';
     if (path === '/reports') return 'Rapports';
     if (path === '/settings') return 'Paramètres';
+
+    // Pour la gestion organisateur 
+    if (path === '/MembresOrganisation') return 'Membres';
+    if (path === '/RendezVousOrganisateur') return 'Rendez-vous Organisateur';
     return 'Afrinov Tech Expo';
   };
   
